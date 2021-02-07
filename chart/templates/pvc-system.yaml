@@ -9,4 +9,10 @@ spec:
     - {{ .Values.persistence.system.accessMode }}
   resources:
     {{- toYaml .Values.persistence.system.resources | nindent 4}}
+{{- if .Values.persistence.system.storageClassName }}
+{{- if (eq "-" .Values.persistence.system.storageClassName) }}
+  storageClassName: ''
+{{- else }}
   storageClassName: {{ .Values.persistence.system.storageClassName }}
+{{- end }}
+{{- end }}
