@@ -25,12 +25,12 @@ appVersion: 3.3.0
 dependencies:
   - name: elasticsearch
     version: "12.x.x"
-    repository: https://charts.bitnami.com/bitnami
+    repository: https://github.com/bitnami/charts/tree/master/bitnami/elasticsearch
     condition: elasticsearch.enabled
   - name: postgresql
     version: "8.x.x"
-    repository: https://charts.bitnami.com/bitnami
+    repository: https://github.com/bitnami/charts/tree/master/bitnami/postgresql
     condition: postgres.enabled
   - name: redis
     version: "10.x.x"
-    repository: https://charts.bitnami.com/bitnami
+    repository: https://github.com/bitnami/charts/tree/master/bitnami/redis
