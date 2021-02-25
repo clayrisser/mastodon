@@ -4,6 +4,8 @@ metadata:
   name: {{ template "mastodon.fullname" . }}-system
   labels:
     {{- include "mastodon.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": pre-install
 spec:
   accessModes:
     - {{ .Values.persistence.system.accessMode }}
